@@ -1,0 +1,21 @@
+[user]
+	name = Ian Draves
+	email = 32991131+iandraves@users.noreply.github.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = true
+
+[push]
+	autoSetupRemote = true
+
+[core]
+	editor = cursor --wait
+
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	lg = log --oneline --graph --decorate -20

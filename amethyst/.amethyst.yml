@@ -1,0 +1,51 @@
+# Amethyst – automatic tiling window manager for macOS
+# https://github.com/ianyh/Amethyst
+# Place at ~/.amethyst.yml
+
+# Layouts available per-Space (cycle with Option+Shift+Space)
+layouts:
+  - tall        # Main left + stack right (mouse-resizable divider)
+  - bsp         # Binary space partitioning (fallback)
+
+# Mod keys: Option+Shift (comfortable, avoids conflicts with most apps)
+mod1:
+  - option
+  - shift
+mod2:
+  - option
+  - shift
+  - control
+
+# Window gaps
+window-margin-size: 8
+window-margins: true
+smart-window-margins: false  # Keep margins uniform regardless of window count
+
+# Padding around screen edges (half of window-margin so total edge gap matches between-window gap)
+screen-padding-left: 4
+screen-padding-right: 4
+screen-padding-top: 4
+screen-padding-bottom: 4
+
+# Behavior
+float-small-windows: true          # Auto-float dialogs/popups
+mouse-follows-focus: false         # Don't warp the mouse
+focus-follows-mouse: true          # Focus tracks mouse hover
+enables-layout-hud: false          # No layout popup notifications
+enables-layout-hud-on-space-change: false
+launch-on-login: true
+restore-layouts-on-launch: true
+
+# Mouse support
+mouse-swaps-windows: true          # Drag a window onto another to swap
+mouse-resizes-windows: true        # Drag the divider between panes to resize
+
+# Apps to always float (never tile)
+floating:
+  - com.apple.systempreferences
+  - com.apple.SystemPreferences
+  - com.apple.calculator
+  - com.1password.1password
+  - com.apple.Preview
+
+floating-is-blacklist: true
