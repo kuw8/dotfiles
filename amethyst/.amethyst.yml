@@ -28,7 +28,7 @@ disable-padding-on-builtin-display: false
 window-margins: true
 window-margin-size: 8
 smart-window-margins: false
-screen-padding-left: 8
-screen-padding-right: 8
-screen-padding-top: 8
-screen-padding-bottom: 8
+screen-padding-left: 0
+screen-padding-right: 0
+screen-padding-top: 0
+screen-padding-bottom: 0
