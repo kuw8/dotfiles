@@ -45,49 +45,10 @@ if [ ! -d "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting" ]; then
 fi
 
 # ── Symlinks ──────────────────────────────────────────────────────────────────
-link "$DOTFILES/amethyst/.amethyst.yml"       "$HOME/.amethyst.yml"
 link "$DOTFILES/zsh/.zshrc"                   "$HOME/.zshrc"
 link "$DOTFILES/zsh/.zprofile"                "$HOME/.zprofile"
 link "$DOTFILES/git/.gitconfig"               "$HOME/.gitconfig"
 
-# ── macOS Defaults ────────────────────────────────────────────────────────────
-info "Setting macOS defaults…"
-
-# Faster key repeat
-defaults write NSGlobalDomain KeyRepeat -int 2
-defaults write NSGlobalDomain InitialKeyRepeat -int 15
-
-# Disable press-and-hold for accent characters (enables key repeat everywhere)
-defaults write NSGlobalDomain ApplePressAndHoldEnabled -bool false
-
-# Show file extensions
-defaults write NSGlobalDomain AppleShowAllExtensions -bool true
-
-# Finder: show path bar, status bar, default to list view
-defaults write com.apple.finder ShowPathbar -bool true
-defaults write com.apple.finder ShowStatusBar -bool true
-defaults write com.apple.finder FXPreferredViewStyle -string "Nlsv"
-
-# Disable .DS_Store on network/USB volumes
-defaults write com.apple.desktopservices DSDontWriteNetworkStores -bool true
-defaults write com.apple.desktopservices DSDontWriteUSBStores -bool true
-
-# Dock: auto-hide, small icons, no recents
-defaults write com.apple.dock autohide -bool true
-defaults write com.apple.dock tilesize -int 48
-defaults write com.apple.dock show-recents -bool false
-defaults write com.apple.dock mru-spaces -bool false  # don't rearrange spaces
-
-# Disable auto-correct
-defaults write NSGlobalDomain NSAutomaticSpellingCorrectionEnabled -bool false
-
-ok "macOS defaults set (some may need a logout to take effect)"
-
-# ── Launch Amethyst ───────────────────────────────────────────────────────────
-info "Launching Amethyst…"
-open -a Amethyst
-
 echo ""
-ok "Dotfiles installed! Grant Amethyst Accessibility permissions when prompted."
-ok "Keybindings: Option+Shift+Space (cycle layout), Option+Shift+Enter (swap main)"
+ok "Dotfiles installed!"
 echo ""

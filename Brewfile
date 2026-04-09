@@ -1,6 +1,3 @@
-# ── Window Management ─────────────────────────────────────────────────────────
-cask "amethyst"                     # automatic tiling window manager
-
 # ── Terminal & Shell ──────────────────────────────────────────────────────────
 cask "iterm2"
 cask "alacritty"
