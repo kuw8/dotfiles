@@ -1,7 +1,10 @@
 # ── Terminal & Shell ──────────────────────────────────────────────────────────
 cask "ghostty"
-cask "amethyst"
 cask "font-hack-nerd-font"
+
+# ── Window Manager ────────────────────────────────────────────────────────────
+brew "koekeishiya/formulae/yabai"
+brew "koekeishiya/formulae/skhd"
 
 # ── Development ───────────────────────────────────────────────────────────────
 brew "git"

@@ -1,0 +1,33 @@
+# skhd — keybindings for yabai
+# Mod1 = ctrl+alt           (focus / common ops)
+# Mod2 = ctrl+alt+shift     (move/throw variants)
+
+# ── Focus windows by direction ────────────────────────────────────────────────
+ctrl + alt - left  : yabai -m window --focus west
+ctrl + alt - right : yabai -m window --focus east
+ctrl + alt - up    : yabai -m window --focus north
+ctrl + alt - down  : yabai -m window --focus south
+
+# ── Move (swap) windows by direction ──────────────────────────────────────────
+ctrl + alt + shift - left  : yabai -m window --swap west  || yabai -m window --warp west
+ctrl + alt + shift - right : yabai -m window --swap east  || yabai -m window --warp east
+ctrl + alt + shift - up    : yabai -m window --swap north || yabai -m window --warp north
+ctrl + alt + shift - down  : yabai -m window --swap south || yabai -m window --warp south
+
+# ── Resize main pane ──────────────────────────────────────────────────────────
+ctrl + alt - 0x18 : yabai -m window --resize right:40:0  || yabai -m window --resize left:-40:0   # =/+
+ctrl + alt - 0x1B : yabai -m window --resize right:-40:0 || yabai -m window --resize left:40:0    # -
+
+# ── Layout ────────────────────────────────────────────────────────────────────
+ctrl + alt - space : yabai -m space --rotate 90
+ctrl + alt - r     : yabai -m space --balance
+ctrl + alt - f     : yabai -m window --toggle float; \
+                     yabai -m window --grid 6:6:1:1:4:4
+
+# ── Displays: ctrl+alt+N focuses display N, +shift throws window to it ────────
+ctrl + alt - 1         : yabai -m display --focus 1
+ctrl + alt - 2         : yabai -m display --focus 2
+ctrl + alt - 3         : yabai -m display --focus 3
+ctrl + alt + shift - 1 : yabai -m window --display 1; yabai -m display --focus 1
+ctrl + alt + shift - 2 : yabai -m window --display 2; yabai -m display --focus 2
+ctrl + alt + shift - 3 : yabai -m window --display 3; yabai -m display --focus 3

@@ -49,8 +49,15 @@ link "$DOTFILES/zsh/.zshrc"                   "$HOME/.zshrc"
 link "$DOTFILES/zsh/.zprofile"                "$HOME/.zprofile"
 link "$DOTFILES/git/.gitconfig"               "$HOME/.gitconfig"
 link "$DOTFILES/ghostty/config"               "$HOME/.config/ghostty/config"
-link "$DOTFILES/amethyst/.amethyst.yml"       "$HOME/.amethyst.yml"
+link "$DOTFILES/yabai/yabairc"                "$HOME/.config/yabai/yabairc"
+link "$DOTFILES/skhd/skhdrc"                  "$HOME/.config/skhd/skhdrc"
+chmod +x "$DOTFILES/yabai/yabairc"
+
+# ── Start window manager services ─────────────────────────────────────────────
+yabai --start-service || true
+skhd --start-service  || true
 
 echo ""
 ok "Dotfiles installed!"
+ok "Grant Accessibility permissions to yabai and skhd in System Settings."
 echo ""
