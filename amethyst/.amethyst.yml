@@ -1,0 +1,25 @@
+# Minimal Amethyst config — set and forget.
+# Layouts: tall is the classic master/stack; fullscreen as a fallback.
+layouts:
+  - tall
+  - fullscreen
+
+# Quietly tile in the background.
+enables-layout-hud: false
+enables-layout-hud-on-space-change: false
+
+# Focus follows the mouse cursor (but don't warp the cursor on focus changes).
+focus-follows-mouse: true
+mouse-follows-focus: false
+
+# Drag tiled windows with the mouse to move/swap and resize.
+mouse-resizes-windows: true
+mouse-swaps-windows: true
+
+# Sensible defaults for new windows.
+new-windows-to-main: true
+restore-layouts-on-launch: true
+
+# Don't fight macOS — let native fullscreen and floating dialogs do their thing.
+float-small-windows: true
+disable-padding-on-builtin-display: true
