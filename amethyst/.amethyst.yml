@@ -23,11 +23,16 @@ restore-layouts-on-launch: true
 
 # Don't fight macOS — let native fullscreen and floating dialogs do their thing.
 float-small-windows: true
+disable-padding-on-builtin-display: false
 
 # Apps that should never be tiled.
+floating-is-blacklist: true
 floating:
   - id: com.apple.systempreferences
-disable-padding-on-builtin-display: false
+  - id: com.apple.finder
+    window-titles:
+      - "Info"
+      - "Copy"
 
 # 8px gap around every tiled window — both between windows and against screen edges.
 window-margins: true
@@ -38,23 +43,70 @@ screen-padding-right: 0
 screen-padding-top: 0
 screen-padding-bottom: 0
 
-# Swap default screen shortcuts: option+shift+N throws to screen N,
-# ctrl+option+shift+N focuses screen N.
-focus-screen-1:
+# ── Keybindings ───────────────────────────────────────────────────────────────
+# Mod1 = control+option (ergonomic two-finger combo, no shift on common ops).
+# Mod2 = control+option+shift (for "move/throw" variants).
+# Arrows for direction. No cmd-based bindings — too many native conflicts.
+mod1:
+  - control
+  - option
+mod2:
+  - control
+  - option
+  - shift
+
+# Focus
+cycle-layout:
+  mod: mod1
+  key: space
+focus-ccw:
+  mod: mod1
+  key: left
+focus-cw:
+  mod: mod1
+  key: right
+swap-main:
+  mod: mod1
+  key: up
+shrink-main:
+  mod: mod1
+  key: "-"
+expand-main:
+  mod: mod1
+  key: "="
+
+# Move windows within the stack
+swap-ccw:
   mod: mod2
+  key: left
+swap-cw:
+  mod: mod2
+  key: right
+
+# Float / re-tile escape hatches
+toggle-float:
+  mod: mod1
+  key: f
+reevaluate-windows:
+  mod: mod1
+  key: r
+
+# Screens: mod1+N focuses, mod2+N throws.
+focus-screen-1:
+  mod: mod1
   key: "1"
 focus-screen-2:
-  mod: mod2
+  mod: mod1
   key: "2"
 focus-screen-3:
-  mod: mod2
+  mod: mod1
   key: "3"
 throw-screen-1:
-  mod: mod1
+  mod: mod2
   key: "1"
 throw-screen-2:
-  mod: mod1
+  mod: mod2
   key: "2"
 throw-screen-3:
-  mod: mod1
+  mod: mod2
   key: "3"
