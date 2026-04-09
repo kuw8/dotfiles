@@ -1,6 +1,7 @@
 # ── Terminal & Shell ──────────────────────────────────────────────────────────
 cask "iterm2"
 cask "alacritty"
+cask "ghostty"
 brew "coreutils"
 brew "fd"
 brew "ripgrep"

@@ -19,3 +19,9 @@
 	br = branch
 	st = status
 	lg = log --oneline --graph --decorate -20
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential

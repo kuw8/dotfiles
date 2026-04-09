@@ -48,6 +48,7 @@ fi
 link "$DOTFILES/zsh/.zshrc"                   "$HOME/.zshrc"
 link "$DOTFILES/zsh/.zprofile"                "$HOME/.zprofile"
 link "$DOTFILES/git/.gitconfig"               "$HOME/.gitconfig"
+link "$DOTFILES/ghostty/config"               "$HOME/.config/ghostty/config"
 
 echo ""
 ok "Dotfiles installed!"
