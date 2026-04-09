@@ -12,7 +12,7 @@
 	autoSetupRemote = true
 
 [core]
-	editor = cursor --wait
+	editor = vim
 
 [alias]
 	co = checkout
