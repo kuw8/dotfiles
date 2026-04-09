@@ -8,8 +8,9 @@ layouts:
 enables-layout-hud: false
 enables-layout-hud-on-space-change: false
 
-# Focus follows the mouse cursor (but don't warp the cursor on focus changes).
-focus-follows-mouse: true
+# Click to focus — focus-follows-mouse steals focus from context menus and
+# settings windows the moment the cursor drifts off them.
+focus-follows-mouse: false
 mouse-follows-focus: false
 
 # Drag tiled windows with the mouse to move/swap and resize.
@@ -32,3 +33,24 @@ screen-padding-left: 0
 screen-padding-right: 0
 screen-padding-top: 0
 screen-padding-bottom: 0
+
+# Swap default screen shortcuts: option+shift+N throws to screen N,
+# ctrl+option+shift+N focuses screen N.
+focus-screen-1:
+  mod: mod2
+  key: "1"
+focus-screen-2:
+  mod: mod2
+  key: "2"
+focus-screen-3:
+  mod: mod2
+  key: "3"
+throw-screen-1:
+  mod: mod1
+  key: "1"
+throw-screen-2:
+  mod: mod1
+  key: "2"
+throw-screen-3:
+  mod: mod1
+  key: "3"
