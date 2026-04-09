@@ -23,6 +23,10 @@ restore-layouts-on-launch: true
 
 # Don't fight macOS — let native fullscreen and floating dialogs do their thing.
 float-small-windows: true
+
+# Apps that should never be tiled.
+floating:
+  - id: com.apple.systempreferences
 disable-padding-on-builtin-display: false
 
 # 8px gap around every tiled window — both between windows and against screen edges.
