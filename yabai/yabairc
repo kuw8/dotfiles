@@ -1,8 +1,10 @@
 #!/usr/bin/env sh
 # yabai config — runs without the scripting addition (no SIP changes).
 
-# Wait for Accessibility API to be ready on login.
-sleep 2
+# Wait for Accessibility API to be ready before configuring.
+until yabai -m query --spaces &>/dev/null; do
+    sleep 0.5
+done
 
 # ── Layout ────────────────────────────────────────────────────────────────────
 yabai -m config layout                      bsp
@@ -37,4 +39,4 @@ yabai -m rule --add app="^Finder$" title="(Co(py|nnect)|Move|Info|Pref)" manage=
 yabai -m rule --add title="Preferences"         manage=off
 yabai -m rule --add title="Settings"            manage=off
 
-echo "yabai configuration loaded."
+echo "yabai configuration loaded. focus_follows_mouse=$(yabai -m config focus_follows_mouse)"
