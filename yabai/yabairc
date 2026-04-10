@@ -1,6 +1,9 @@
 #!/usr/bin/env sh
 # yabai config — runs without the scripting addition (no SIP changes).
 
+# Wait for Accessibility API to be ready on login.
+sleep 2
+
 # ── Layout ────────────────────────────────────────────────────────────────────
 yabai -m config layout                      bsp
 yabai -m config window_placement            second_child
